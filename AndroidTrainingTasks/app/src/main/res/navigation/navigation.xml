@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@id/userFragment"
+        android:name="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.user.UserFragment"
+        android:label="User">
+        <argument
+            android:name="user"
+            app:argType="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.entities.UserResponse" />
+    </fragment>
+    <fragment
+        android:id="@id/petsFragment"
+        android:name="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.pets.PetsFragment"
+        android:label="Pets List">
+        <action
+            android:id="@+id/action_petsFragment_to_petFragment"
+            app:destination="@id/petFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petFragment"
+        android:name="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.pet.PetFragment"
+        android:label="PetFragment">
+        <argument
+            android:name="pet"
+            app:argType="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.entities.PetResponse" />
+        <action
+            android:id="@+id/action_petFragment_to_petsFragment"
+            app:destination="@id/petsFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userViewModel"
+            type="com.coherentsolutions.by.max.sir.androidtrainingtasks.home.user.UserViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/update_user_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".home.user.UserFragment">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconDrawable="@drawable/ic_baseline_person_24"
+                app:endIconMode="custom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/your_username"
+                    android:text='@{userViewModel.user==null ? "":userViewModel.user.username}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:endIconCheckable="true"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/inputLayout_username"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/inputLayout_username"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayout_username"
+                app:layout_constraintVertical_bias="0.0"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/your_password"
+                    android:inputType="textPassword"
+                    android:text='@{userViewModel.user==null ? "":userViewModel.user.password}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.coherentsolutions.by.max.sir.androidtrainingtasks.home.utils.CustomView
+                android:id="@+id/custom_view_button_delete"
+                android:layout_width="105dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/inputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayout" />
+
+            <com.coherentsolutions.by.max.sir.androidtrainingtasks.home.utils.ActivityIndicator
+                android:id="@+id/loading_user"
+                android:layout_width="@dimen/a_indicator_with_height_square_side"
+                android:layout_height="@dimen/a_indicator_with_height_square_side"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/inputLayout"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/inputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/inputLayout"
+                tools:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

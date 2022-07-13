@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_text_size_48_sp">48sp</dimen>
+    <dimen name="a_indicator_with_height_square_side">300dp</dimen>
+</resources>

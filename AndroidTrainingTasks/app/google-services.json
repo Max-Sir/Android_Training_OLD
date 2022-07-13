@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446254106715",
+    "project_id": "androidtrainingtask",
+    "storage_bucket": "androidtrainingtask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446254106715:android:bc37132918a8bc241d577e",
+        "android_client_info": {
+          "package_name": "com.coherentsolutions.by.max.sir.androidtrainingtasks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446254106715-q1bpjpog1p4agndbrhoeb3g16ua9ht3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBruJNp8hT3bDP38WKzgc8cMvQDkxr_xms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446254106715-q1bpjpog1p4agndbrhoeb3g16ua9ht3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

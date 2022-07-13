@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A92CE8"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".regestrationmodule.ui.login.LoginActivity"
+        tools:ignore="ScrollViewSize">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="24dp"
+            app:endIconDrawable="@drawable/ic_baseline_person_24"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/username_string"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textColor="#0C2E45"
+                tools:text="Max_Syromolotov" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLauoyt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameEditTextLayout"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/prompt_password"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:textColor="#110165"
+                tools:text=";378(oIj" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_edit_login_layout"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:endIconDrawable="@drawable/ic_baseline_phone_24"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLauoyt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_edit_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/your_phone_welcome"
+                android:inputType="phone"
+                android:selectAllOnFocus="true"
+
+
+                tools:ignore="Autofill,LabelFor"
+                tools:text="+375-29-393-33-14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_edit_login_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:endIconDrawable="@drawable/ic_baseline_alternate_email_24"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_edit_login_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/your_email_welcome"
+                android:inputType="textEmailAddress"
+                tools:ignore="Autofill,LabelFor"
+                tools:text="syromolotov.maks@gmail.com" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastname_edit_login_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:endIconDrawable="@drawable/ic_baseline_text_format_24"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_edit_login_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastname_edit_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/your_surname_welcome"
+                android:inputType="textPersonName"
+                tools:ignore="Autofill,LabelFor"
+                tools:text="Syromolotov" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstname_edit_login_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:endIconDrawable="@drawable/ic_baseline_text_format_24"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastname_edit_login_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstname_edit_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/your_name_welcome"
+                android:inputType="textPersonName"
+                tools:ignore="Autofill,LabelFor"
+                tools:text="Max" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/oval_button"
+            android:enabled="false"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/action_sign_in"
+            android:textColor="#110165"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstname_edit_login_layout"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.coherentsolutions.by.max.sir.androidtrainingtasks.home.utils.ActivityIndicator
+            android:id="@+id/loading"
+            android:layout_width="@dimen/a_indicator_with_height_square_side"
+            android:layout_height="@dimen/a_indicator_with_height_square_side"
+            android:layout_marginTop="20dp"
+            android:translationZ="90dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/firstname_edit_login_layout"
+            app:layout_constraintStart_toStartOf="@+id/firstname_edit_login_layout"
+            app:layout_constraintTop_toBottomOf="@+id/firstname_edit_login_layout" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/use_biometrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/remember_me"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:thumb="@xml/thumb"
+            app:layout_constraintEnd_toEndOf="@+id/firstname_edit_login_layout"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="@+id/firstname_edit_login_layout"
+            app:layout_constraintTop_toBottomOf="@+id/firstname_edit_login_layout"
+            app:thumbTextPadding="8dp"
+            app:track="@xml/track" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
